@@ -1,0 +1,16 @@
+
+
+<div class="container">
+
+  <nav>
+    <div class="menu">
+      <a id="a1"  [ngClass]="{'selected': !current}" routerLink="/about" (click)="updateSelection('a1')">Sobre Mí</a>
+      <a id="a2" [ngClass]="{'selected': current}" routerLink="/projects" (click)="updateSelection('a2')">Proyectos</a>
+    </div>
+    <div>
+      <app-devicon-container class="float-right" [Icons]="[{name: 'GitHub', linkTo: 'https://github.com/carlosandresramos'}]" IconSize="small"></app-devicon-container>
+    </div>
+  </nav>
+
+  <router-outlet></router-outlet>
+</div>
